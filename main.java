@@ -1,23 +1,21 @@
 import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        Student details = new Student();
-        details.modules();
-        //prompt
-        System.out.print("Please enter your name: ");
+        car car = new car();
+        System.out.print("Please enter your company name: ");
         String name = sc.nextLine();
-        System.out.print("please enter your surname:");
-        String surname = sc.nextLine();
+        System.out.print("please enter your model:");
+        String model = sc.nextLine();
+        System.out.println("Please enter year of the car");
+        int year = sc.nextInt();
+        car.set_name(name);
+        car.set_model(model);
+        car.set_year(year);
 
-        //setting
-        details.set_name(name);
-        details.set_surname(surname);
-        //displaying
-        System.out.println("Your name is " + details.get_name());
-        System.out.print("Your surname is " +details.get_surname());
+System.out.println("company name" + car.get_name());
+System.out.println("Model" + car.get_year());
+System.out.println("year" + car.get_year());
+        car.drive();
     }
 }
